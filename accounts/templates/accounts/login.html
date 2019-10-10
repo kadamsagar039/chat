@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            User name : <input type="text" id="username" name="username" placeholder="User name" required><br>
+            Password : <input type="password" name="password" placeholder="Password" required><br>
+        
+            <input type="submit" id="submit">
+        </div>     
+        <script>
+            document.querySelector('#submit').onclick = function(e) {
+            var loggeduser = document.getElementById('username').value;
+            localStorage.setItem('loggeduser', loggeduser);}
+        </script>       
+    </form>
+    <form>
+        <div>
+            <p>Forgot Password ..? ..<a href="resetmail">Click here</a>.</p>
+        </div>  
+    </form>
+    <div>
+            {% for message in messages %}
+            <h3>{{ message }}</h3>
+            {% endfor %}
+    </div>
+{% endblock %}
