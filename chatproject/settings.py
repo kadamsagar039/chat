@@ -25,7 +25,7 @@ SECRET_KEY = 'k1yeoqr-ol)bk=mt5%*r2s059q9&gsi*d3ya1fcsru@v7d$$xc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -144,3 +144,4 @@ EMAIL_HOST_USER = 'ankitbhadani94@gmail.com'
 EMAIL_HOST_PASSWORD = 'Ankit@123456789'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+STATIC_ROOT = os.path.join(BASE_DIR, "static/"
