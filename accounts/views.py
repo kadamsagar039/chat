@@ -57,7 +57,7 @@ def login(request):
                 smddata['data'] = [Token]
             except KeyError as e:
                 print(e)
-            Loggeduser.objects.create(username=username)
+            # Loggeduser.objects.create(username=username)
             return redirect('/login/index_page')
         else:
             messages.info(request, 'invalid credentials')
@@ -280,4 +280,3 @@ def room(request, room_name):
 def home(request):
     return render(request,"accounts/home.html")
 
-    
